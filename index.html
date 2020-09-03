@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tacos</title>
+    <style media="screen">
+    body{
+      font-family: sans-serif;
+    }
+    .comanda{
+      display: block;
+      width: 500px
+    }
+      .platillo, .detalles {
+        display: flex;
+        align-items: center;
+      }
+        .opcion{
+          width: 150px;
+          margin: 5px
+        }
+        .opcionInput{
+          width: 30px;
+          height: 30px;
+          margin: 5px;
+          text-align: center;
+        }
+      #ordenar{
+        margin: 20px
+      }
+    </style>
+  </head>
+  <body>
+    Hola mundo!
+    <p>¿Cuántos tacos quieres?</p>
+    <section class="comanda">
+
+      <div class="platillo">
+        <h2 class="opcion" id='opcion1'></h1>
+        <input class="opcionInput" id="opcion1Input" type="number" name="" value="">
+      </div>
+      <div class="platillo">
+        <h2 class="opcion" id=opcion2></h1>
+        <input class="opcionInput" id="opcion2Input" type="number" name="" value="">
+      </div>
+      <div class="platillo">
+        <h2 class="opcion" id=opcion3></h1>
+        <input class="opcionInput" id="opcion3Input" type="number" name="" value="">
+      </div>
+
+      <input class='ordenar' id="ordenar" type="button" name="ordenar" value="ordenar">
+
+      <p id='tuOrden'></p>
+
+    </section>
+  </body>
+
+  <script type="text/javascript" src="funciones.js" >
+
+  </script>
+</html>
