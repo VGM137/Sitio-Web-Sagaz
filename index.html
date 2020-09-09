@@ -25,7 +25,14 @@
           margin: 5px;
           text-align: center;
         }
-      #ordenar{
+      .listo{
+        margin: 20px
+      }
+      .conTodo{
+         display: none
+       }
+      .ordenar{
+        display: none;
         margin: 20px
       }
       #tuOrden{
@@ -51,21 +58,33 @@
         <input class="opcionInput" id="opcion3Input" type="number" name="" value="0">
       </div>
 
-      <!--
       <input class='listo' id="listo" type="button" name="Listo!" value="Listo!">
-      <section>
+
+      <section class="conTodo" id='conTodo'>
         <h1>¿Con todo?</h1>
         <div class="detalles" id="detalles">
-          <h3>Arroz</h3>
-          <input id="verificar" type="checkbox" name="" value="">
+          <h3>Sí, con todo</h3>
+          <input id="verificar1" type="checkbox" name="" value="">
         </div>
         <div class="detalles" id="detalles">
-          <h3>Salsa</h3>
-          <input id="verificar" type="checkbox" name="" value="">
+          <h3>Sin arroz</h3>
+          <input id="verificar2" type="checkbox" name="" value="">
+        </div>
+        <div class="detalles" id="detalles">
+          <h3>Sin salsa</h3>
+          <input id="verificar3" type="checkbox" name="" value="">
+        </div>
+        <div class="detalles" id="detalles">
+          <h3>Salsa aparte</h3>
+          <input id="verificar4" type="checkbox" name="" value="">
+        </div>
+        <div class="detalles" id="detalles">
+          <h3>Desarmados</h3>
+          <input id="verificar5" type="checkbox" name="" value="">
         </div>
       </section>
- -->
-      <input class='ordenar' id="ordenar" type="button" name="ordenar" value="ordenar">
+
+      <input class='ordenar' id="ordenar" type="button" name="Ordenar" value="Ordenar">
 
       <div id='tuOrden'>
         <p id='pedido'></p>
