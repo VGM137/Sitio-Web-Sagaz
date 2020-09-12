@@ -18,22 +18,22 @@ var tuOrden = document.getElementById('tuOrden')
 var guisado1 = document.getElementById('opcion1')
 var guisado2 = document.getElementById('opcion2')
 var guisado3 = document.getElementById('opcion3')
+  /* var guisados = guisado1.value + guisado2.value + guisado3.value */
 
 var listo = document.getElementById('listo')
 listo.addEventListener('click', preguntarDetalles)
+
 
   var conTodo = document.getElementById('conTodo')
   var checkbox1 = document.getElementById('verificar1')
   var checkbox2 = document.getElementById('verificar2')
   var checkbox3 = document.getElementById('verificar3')
   var checkbox4 = document.getElementById('verificar4')
-  var checkbox5 = document.getElementById('verificar5')
   checkbox1.addEventListener('change', cambio1)
   checkbox2.addEventListener('change', cambio2)
   checkbox3.addEventListener('change', cambio3)
   checkbox4.addEventListener('change', cambio4)
-  checkbox5.addEventListener('change', cambio5)
-  var checkboxes = [checkbox1, checkbox2, checkbox3, checkbox4, checkbox5]
+  var checkboxes = [checkbox1, checkbox2, checkbox3, checkbox4]
 
 
 var ordenar = document.getElementById("ordenar");
@@ -55,7 +55,6 @@ function cambio1 () {
     checkbox2.checked = false
     checkbox3.checked = false
     checkbox4.checked = false
-    checkbox5.checked = false
   } else {
     noMostrarOrdenar()
     checkbox1.checked = false
@@ -68,7 +67,7 @@ function cambio2(){
     checkbox2.checked = true
     checkbox1.checked = false
   } else {
-/*     noMostrarOrdenar() */
+    noMostrarOrdenar()
     checkbox2.checked = false
   }
 }
@@ -77,7 +76,6 @@ function cambio3(){
     mostrarOrdenar()
     checkbox3.checked = true
     checkbox1.checked = false
-    checkbox4.checked = false
   } else {
     noMostrarOrdenar()
     checkbox3.checked = false
@@ -88,32 +86,23 @@ function cambio4(){
     mostrarOrdenar()
     checkbox4.checked = true
     checkbox1.checked = false
-    checkbox3.checked = false
   } else {
     noMostrarOrdenar()
     checkbox4.checked = false
   }
 }
-function cambio5(){
-  if (checkbox5.checked){
-    mostrarOrdenar()
-    checkbox5.checked = true
-    checkbox1.checked = false
-  } else {
-    noMostrarOrdenar()
-    checkbox5.checked = false
-  }
-}
 
+var opcionInput = document.getElementsByClassName('opcionInput')
+var opcionUno = document.getElementById('opcion1Input')
+var opcionDos = document.getElementById('opcion2Input')
+var opcionTres = document.getElementById('opcion3Input')
+
+var orden = parseInt(opcionUno.value) + parseInt(opcionDos.value) + parseInt(opcionTres.value)
 
 function levantarPedido() {
-  var opcionUno = document.getElementById('opcion1Input')
-  var opcionDos = document.getElementById('opcion2Input')
-  var opcionTres = document.getElementById('opcion3Input')
   var o1 = parseInt(opcionUno.value)
   var o2 = parseInt(opcionDos.value)
   var o3 = parseInt(opcionTres.value)
-  var orden = o1 + o2 + o3
   pedido.innerHTML = 'Pediste:'
   if(o1 > 0){
     uno.innerHTML = `${o1} ${o1<2 ? 'taco':'tacos'} de ${menu[0].nombre}`
@@ -123,7 +112,7 @@ function levantarPedido() {
     tres.innerHTML = `${o3} ${o3<2 ? 'taco':'tacos'} de ${menu[2].nombre}`
   }
 
-    console.log(orden, uno, dos, tres)
+    console.log( uno, dos, tres)
 }
 
 guisado1.innerHTML = menu[0].nombre

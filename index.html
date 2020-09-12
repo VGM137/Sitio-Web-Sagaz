@@ -3,97 +3,89 @@
   <head>
     <meta charset="utf-8">
     <title>Tacos</title>
-    <style media="screen">
-    body{
-      font-family: sans-serif;
-    }
-    .comanda{
-      display: block;
-      width: 500px
-    }
-      .platillo, .detalles {
-        display: flex;
-        align-items: center;
-      }
-        .opcion{
-          width: 150px;
-          margin: 5px
-        }
-        .opcionInput{
-          width: 30px;
-          height: 30px;
-          margin: 5px;
-          text-align: center;
-        }
-      .listo{
-        margin: 20px
-      }
-      .conTodo{
-         display: none
-       }
-      .ordenar{
-        display: none;
-        margin: 20px
-      }
-      #tuOrden{
+    <link href='estilos.css' rel='stylesheet' media="screen">
 
-      }
-    </style>
   </head>
   <body>
-    Hola mundo!
-    <p>¿Cuántos tacos quieres?</p>
     <section class="comanda">
-
-      <div class="platillo">
-        <h2 class="opcion" id='opcion1'></h1>
-        <input class="opcionInput" id="opcion1Input" type="number" name="" value="0">
+      
+      <div class='header'>
+        <h1>¿Cuántos tacos quieres?</h1>
       </div>
-      <div class="platillo">
-        <h2 class="opcion" id=opcion2></h1>
-        <input class="opcionInput" id="opcion2Input" type="number" name="" value="0">
-      </div>
-      <div class="platillo">
-        <h2 class="opcion" id=opcion3></h1>
-        <input class="opcionInput" id="opcion3Input" type="number" name="" value="0">
-      </div>
-
-      <input class='listo' id="listo" type="button" name="Listo!" value="Listo!">
-
-      <section class="conTodo" id='conTodo'>
-        <h1>¿Con todo?</h1>
-        <div class="detalles" id="detalles">
-          <h3>Sí, con todo</h3>
-          <input id="verificar1" type="checkbox" name="" value="">
-        </div>
-        <div class="detalles" id="detalles">
-          <h3>Sin arroz</h3>
-          <input id="verificar2" type="checkbox" name="" value="">
-        </div>
-        <div class="detalles" id="detalles">
-          <h3>Sin salsa</h3>
-          <input id="verificar3" type="checkbox" name="" value="">
-        </div>
-        <div class="detalles" id="detalles">
-          <h3>Salsa aparte</h3>
-          <input id="verificar4" type="checkbox" name="" value="">
-        </div>
-        <div class="detalles" id="detalles">
-          <h3>Desarmados</h3>
-          <input id="verificar5" type="checkbox" name="" value="">
-        </div>
+      
+      <section class='menu'>
+        <fieldset class="elegir" id='elegir' min='1'>
+          <div class="platillo">
+            <form class="box">
+              <label class="opcion" id=opcion1></label>
+              <input class="opcionInput" id="opcion1Input" type="number" name="" value="0">
+            </form>
+          </div>
+          <div class="platillo">
+            <form class="box">
+              <label class="opcion" id=opcion2></label>
+              <input class="opcionInput" id="opcion2Input" type="number" name="" value="0">
+            </form>
+          </div>
+          <div class="platillo">
+            <form class="box">
+              <label class="opcion" id=opcion3></label>
+              <input class="opcionInput" id="opcion3Input" type="number" name="" value="0">
+            </form>
+          </div>
+        </fieldset>
+        
+        <form class="boton">
+          <input class='listo' id="listo"  type="button" name="Listo!" value="Listo!" >
+        </form  >
       </section>
 
-      <input class='ordenar' id="ordenar" type="button" name="Ordenar" value="Ordenar">
 
-      <div id='tuOrden'>
-        <p id='pedido'></p>
-        <p id="uno"></p>
-        <p id="dos"></p>
-        <p id="tres"></p>
-      </div>
-
+      <section class="conTodo" id='conTodo'>
+        <div class="preguntarDetalles">
+          <h1>¿Con todo?</h1>
+        </div>
+        
+        <div class="detalles" id="detalles">
+          <form class="box">
+            <label class="opcion">Sí, con todo</label>
+            <input class="opcionBox" id="verificar1" type="checkbox" name="" value="">
+          </form>
+        </div>
+        <div class="detalles" id="detalles">
+          <form class="box">
+            <label class="opcion">Sin arroz</label>
+            <input class="opcionBox" id="verificar2" type="checkbox" name="" value="">
+          </form>
+        </div>
+        <div class="detalles" id="detalles">
+          <form class="box">
+            <label class="opcion">Sin salsa</label>
+            <input class="opcionBox" id="verificar3" type="checkbox" name="" value="">
+          </form>
+        </div>
+        <div class="detalles" id="detalles">
+          <form class="box">
+            <label class="opcion">Desarmados</label>
+            <input class="opcionBox" id="verificar4" type="checkbox" name="" value="">
+          </form>
+        </div>
+        <form class="boton">
+          <input class='ordenar' id="ordenar" type="button" name="Ordenar" value="Ordenar">
+        </form>
+      </section>
+      
     </section>
+    
+    <section class="ticket" id='ticket'>
+      <div class="tuOrden" id='tuOrden'>
+        <h2 class="pedido" id='pedido'></h2>
+        <p class='taco' id="uno"></p>
+        <p class='taco' id="dos"></p>
+        <p class='taco' id="tres"></p>
+      </div>
+    </section>
+
   </body>
 
   <script type="text/javascript" src="funciones.js" >
