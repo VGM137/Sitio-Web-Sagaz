@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\fundamentos-js"
+		},
+		{
+			"path": "..\\javascrip-basico"
+		},
+		{
+			"path": "..\\css-grid-layout"
+		},
+		{
+			"path": "..\\Programación"
+		}
+	],
+	"settings": {}
+}
