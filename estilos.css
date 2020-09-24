@@ -9,7 +9,7 @@ body{
 h1{
   text-align: center
 }
-.header, .preguntarDetalles{
+.header{
   width: 50%;
   margin: 0 auto
 }
@@ -22,24 +22,25 @@ h1{
 }
   .elegir{
     border-radius: 10px;
+    padding: 20px 12px;
   }
   .menu{
     width: 50%;
     margin: 0 auto;
     display: block;
   }
-  .platillo, .detalles {
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-  }
+ /*    .avisoTacos{
+      display: none
+    } */
+    .platillos{
+      margin-bottom: 10px ;
+    }
     .box{
       width: inherit;
       height: 40px;
       align-items: center;
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 70% 30%;
       grid-auto-flow: row;
       grid-template-areas: 'opcion opcionInput';
     }
@@ -56,31 +57,54 @@ h1{
         margin: 0 auto;
         text-align: center;
       }
-      .opcionBox{
-        grid-area: opcionInput;
-        margin: 0 auto
+      .avisoCheck, .avisoTacos{
+        display: none;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,0,0,.8);
       }
+      .detalles{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        margin: 10px 20px 0 20px;
+      }
+        .check{
+          display: grid;
+          grid-template-columns: 65% 35%;
+          grid-template-rows: 100%;
+          grid-template-areas: 'option opcionBox';
+          align-items: center;
+        }
+        .option{
+          grid-area: option;
+          margin: 5px 0 5px 0px;
+        }
+        .opcionBox{
+          grid-area: opcionBox;
+        }
       .boton{
         width: 80px;
         margin: 10px auto;
         justify-self: center;
       }
-      .listo{
-        margin: 5px auto;
-        height: 40px;
-        width: inherit;
-        border-radius: 10px;
-        justify-self: center;
-        padding: 0;
-        font-size: 1.2em;
-  }
-  .conTodo{
-     display: none;
-     width: 50%;
-     margin: 0 auto
-   }
+    .agregarOrden{
+      width: 100%;
+      height: 40px;
+      margin: 10px auto;
+      border: 1px solid lightgray;
+      border-radius: 10px;
+    }
+      .agregarOrden p{
+        display: flex;
+        height: inherit;
+        margin: auto;
+        margin-left: 20px;
+        align-items: center;
+      }  
+
     .ordenar{
-      display: none;
+/*       display: none; */
       margin: 5 auto;
       height: 40px;
       width: inherit;

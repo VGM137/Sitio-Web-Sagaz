@@ -14,66 +14,60 @@
       </div>
       
       <section class='menu'>
-        <fieldset class="elegir" id='elegir' min='1'>
-          <div class="platillo">
+        <fieldset class="elegir" id='elegir'>
+
+          <div id="avisoTacos" class="avisoTacos">
+            <p id="textoTacos" class="textoTacos"></p>
+          </div>
+          <section class="platillos">
             <form class="box">
               <label class="opcion" id=opcion1></label>
-              <input class="opcionInput" id="opcion1Input" type="number" name="" value="0">
+              <input class="opcionInput" id="opcion1Input" type="number" min="0" value="0" onchange="">
             </form>
-          </div>
-          <div class="platillo">
             <form class="box">
               <label class="opcion" id=opcion2></label>
-              <input class="opcionInput" id="opcion2Input" type="number" name="" value="0">
+              <input class="opcionInput" id="opcion2Input" type="number" min="0" value="0">
             </form>
-          </div>
-          <div class="platillo">
             <form class="box">
               <label class="opcion" id=opcion3></label>
-              <input class="opcionInput" id="opcion3Input" type="number" name="" value="0">
+              <input class="opcionInput" id="opcion3Input" type="number" min="0" value="0">
             </form>
+          </section>
+
+          <div id="avisoCheck" class="avisoCheck">
+            <p id="textoCheck" class="textoCheck"></p>
           </div>
+          <section class="detalles">
+            <form class="check">
+              <label class="option">Con todo</label>
+              <input class="opcionBox" id="verificar1" type="checkbox" name="" value="">
+            </form>
+            <form class="check">
+              <label class="option">Sin arroz</label>
+              <input class="opcionBox" id="verificar2" type="checkbox" name="" value="">
+            </form>
+            <form name="check" class="check">
+              <label class="option">Sin salsa</label>
+              <input name="opcionBox" class="opcionBox" id="verificar3" type="checkbox" name="" value="">
+            </form>
+            <form class="check">
+              <label class="option">Desarmados</label>
+              <input class="opcionBox" id="verificar4" type="checkbox" name="" value="">
+            </form>
+          </section>
+          
         </fieldset>
-        
-        <form class="boton">
-          <input class='listo' id="listo"  type="button" name="Listo!" value="Listo!" >
-        </form  >
-      </section>
 
-
-      <section class="conTodo" id='conTodo'>
-        <div class="preguntarDetalles">
-          <h1>¿Con todo?</h1>
+        <div id="agregarOrden" class="agregarOrden" onclick="nuevaOrden()">
+          <p class="">Agregar nueva orden</p>
         </div>
         
-        <div class="detalles" id="detalles">
-          <form class="box">
-            <label class="opcion">Sí, con todo</label>
-            <input class="opcionBox" id="verificar1" type="checkbox" name="" value="">
-          </form>
-        </div>
-        <div class="detalles" id="detalles">
-          <form class="box">
-            <label class="opcion">Sin arroz</label>
-            <input class="opcionBox" id="verificar2" type="checkbox" name="" value="">
-          </form>
-        </div>
-        <div class="detalles" id="detalles">
-          <form class="box">
-            <label class="opcion">Sin salsa</label>
-            <input class="opcionBox" id="verificar3" type="checkbox" name="" value="">
-          </form>
-        </div>
-        <div class="detalles" id="detalles">
-          <form class="box">
-            <label class="opcion">Desarmados</label>
-            <input class="opcionBox" id="verificar4" type="checkbox" name="" value="">
-          </form>
-        </div>
         <form class="boton">
           <input class='ordenar' id="ordenar" type="button" name="Ordenar" value="Ordenar">
         </form>
+
       </section>
+
       
     </section>
     
